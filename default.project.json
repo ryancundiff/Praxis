@@ -1,0 +1,17 @@
+{
+  "name": "Praxis",
+
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Praxis": {
+        "$path": "src",
+
+        "Packages": {
+          "$path": "Packages"
+        }
+      }
+    }
+  }
+}
