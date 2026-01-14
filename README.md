@@ -12,6 +12,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Symbol | Creates blank userdata that can be turned into a string when coerced | `symbol = "miagobble/symbol@1.0.1"` | https://github.com/MiaGobble/Symbol |
 | Typer | Strict typechecking in runtime implementation | `typer = "miagobble/typer@0.1.0"` | https://github.com/MiaGobble/Typer |
 | Epoxyish | Spring module with latching and value states | `epoxyish = "miagobble/epoxyish@0.1.0"` | https://github.com/MiaGobble/Epoxyish |
+| TracebackUtils | Utilities related to debug library | `traceback-utils = "miagobble/traceback-utils@1.0.0"` | https://github.com/MiaGobble/TracebackUtils |
 | ProgressionUtils | Collection of utilities for currency, quests, and more | TBD | TBD |
 | Signal | A Luau class mockup of Roblox signals and connections | TBD | TBD |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
@@ -19,7 +20,6 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Bezier | A bezier curve utility module | TBD | TBD |
 | Ragdoll | Ragdolls for R6 and R15 | TBD | TBD |
 | Binder | Binds OOP classes to Roblox instances | TBD | TBD |
-| TracebackUtils | Utilities related to debug.traceback | TBD | TBD |
 | Input | Utilities related to player input | TBD | TBD |
 | Initializer | Initializes a collection of modules in a folder, allowing custom load order | TBD | TBD |
 

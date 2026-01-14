@@ -11,5 +11,6 @@ Praxis.Heap = require(Packages.Heap)
 Praxis.Symbol = require(Packages.Symbol)
 Praxis.Typer = require(Packages.Typer)
 Praxis.Epoxyish = require(Packages.Epoxyish)
+Praxis.TracebackUtils = require(Packages.TracebackUtils)
 
 return Praxis
