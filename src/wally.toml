@@ -1,13 +1,12 @@
 [package]
 name = "miagobble/praxis"
-version = "0.1.0"
+version = "0.0.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
 Seam = "miagobble/seam@0.3.4"
-Heap = "miagobble/heap@1.0.3"
+Bucket = "miagobble/bucket@1.0.0"
 Typer = "miagobble/typer@0.1.0"
 Symbol = "miagobble/symbol@1.0.1"
-Epoxyish = "miagobble/epoxyish@0.1.0"
 TracebackUtils = "miagobble/traceback-utils@1.0.0"
