@@ -1,0 +1,11 @@
+gitSourceBranch = "main"
+changelog = false
+classOrder = []
+
+[docusaurus]
+# favicon = ""
+url = "https://praxis.igottic.com"
+baseUrl = "/"
+
+[footer]
+copyright = "Copyright © 2026 Mia Gobble"
