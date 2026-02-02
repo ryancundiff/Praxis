@@ -12,5 +12,7 @@ Praxis.Symbol = require(Packages.Symbol)
 Praxis.Typer = require(Packages.Typer)
 Praxis.Epoxyish = require(Packages.Epoxyish)
 Praxis.TracebackUtils = require(Packages.TracebackUtils)
+Praxis.SeamStoryUttils = require(Packages.SeamStoryUtils)
+Praxis.ProgressionUtils = require(Packages.ProgressionUtils)
 
 return Praxis
