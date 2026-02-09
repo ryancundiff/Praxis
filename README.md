@@ -7,7 +7,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 
 | Name | Description | Wally Install | Repository |
 |------|-------------|---------------|------------|
-| Seam | Reactive states and animation | `seam = "miagobble/seam@0.4.3"` | https://github.com/MiaGobble/Seam |
+| Seam | Reactive states and animation | `seam = "miagobble/seam@0.5.0"` | https://github.com/MiaGobble/Seam |
 | Bucket | Instance tracking and cleanup | `bucket = "miagobble/bucket@1.0.1"` | https://github.com/MiaGobble/Bucket |
 | Symbol | Creates blank userdata that can be turned into a string when coerced | `symbol = "miagobble/symbol@1.0.2"` | https://github.com/MiaGobble/Symbol |
 | Typer | Strict typechecking in runtime implementation | `typer = "miagobble/typer@0.1.1"` | https://github.com/MiaGobble/Typer |
