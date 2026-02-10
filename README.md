@@ -26,3 +26,5 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 The above list can change at any time, especially for parts that are not yet completed.
 
 Praxis is currently very early in development and is public to serve as a WIP. Documentation for undocumented libraries will release soon!
+
+Need support, want to leave suggestions, or chat about Praxis? Join this Discord server: https://discord.gg/Ux9jdhhWxg
