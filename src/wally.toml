@@ -6,9 +6,9 @@ realm = "shared"
 
 [dependencies]
 Seam = "miagobble/seam@0.5.0"
-Bucket = "miagobble/bucket@1.0.1"
+Bucket = "miagobble/bucket@1.0.2"
 Typer = "miagobble/typer@0.1.1"
 Symbol = "miagobble/symbol@1.0.2"
 TracebackUtils = "miagobble/traceback-utils@1.0.1"
 SeamStoryUtils = "miagobble/seam-story-utils@0.1.1"
-ProgressionUtils = "miagobble/progression-utils@1.0.0"
+ProgressionUtils = "miagobble/progression-utils@1.0.1"
