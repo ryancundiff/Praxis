@@ -5,10 +5,11 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-Bucket = "miagobble/bucket@1.0.2"
+Bucket = "miagobble/bucket@1.0.3"
 Typer = "miagobble/typer@0.1.1"
 Symbol = "miagobble/symbol@1.0.2"
 TracebackUtils = "miagobble/traceback-utils@1.0.1"
-SeamStoryUtils = "miagobble/seam-story-utils@0.1.1"
+SeamStoryUtils = "miagobble/seam-story-utils@0.1.2"
 ProgressionUtils = "miagobble/progression-utils@1.0.1"
 Initializer = "miagobble/initializer@1.0.0"
+ExpressivePrompts = "miagobble/expressive-prompts@1.1.0"
