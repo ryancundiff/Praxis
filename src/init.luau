@@ -14,5 +14,6 @@ Praxis.SeamStoryUttils = require(Packages.SeamStoryUtils)
 Praxis.ProgressionUtils = require(Packages.ProgressionUtils)
 Praxis.Initializer = require(Packages.Initializer)
 Praxis.ExpressivePrompts = require(Packages.ExpressivePrompts)
+Praxis.Signal = require(Packages.Signal)
 
 return Praxis

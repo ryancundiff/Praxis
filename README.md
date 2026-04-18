@@ -15,7 +15,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | ProgressionUtils | Collection of utilities for currency, quests, and more | `progression-utils = "miagobble/progression-utils@1.0.1"` | https://github.com/MiaGobble/ProgressionUtils |
 | Initializer | Safely initializes modules, either ordered or unordered. | `initializer = "miagobble/initializer@1.0.0"` | https://github.com/MiaGobble/Initializer |
 | ExpressivePrompts | Customizable UI to replace Roblox's default for ProximityPrompt instances | `expressive-prompts = "miagobble/expressive-prompts@1.1.2"` | https://github.com/MiaGobble/ExpressivePrompts |
-| Signal | A Luau class mockup of Roblox signals and connections | TBD | TBD |
+| Signal | A Luau class mockup of Roblox signals and connections | `signal = "miagobble/signal@1.0.0"` | https://github.com/MiaGobble/Signal |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
 | BadgeUtils | A collection of utilities for reading and awarding badges | TBD | TBD |
 | Bezier | A bezier curve utility module | TBD | TBD |s
