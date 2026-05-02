@@ -16,6 +16,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Initializer | Safely initializes modules, either ordered or unordered. | `initializer = "miagobble/initializer@1.0.0"` | https://github.com/MiaGobble/Initializer |
 | ExpressivePrompts | Customizable UI to replace Roblox's default for ProximityPrompt instances | `expressive-prompts = "miagobble/expressive-prompts@1.1.4"` | https://github.com/MiaGobble/ExpressivePrompts |
 | Signal | A Luau class mockup of Roblox signals and connections | `signal = "miagobble/signal@1.0.1"` | https://github.com/MiaGobble/Signal |
+| AntiAnthro | Force your game to be in R6, even if it's set to R15 in game settings | `anti-anthro = "miagobble/anti-anthro@1.0.0"` | https://github.com/MiaGobble/AntiAnthro |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
 | BadgeUtils | A collection of utilities for reading and awarding badges | TBD | TBD |
 | Bezier | A bezier curve utility module | TBD | TBD |s
