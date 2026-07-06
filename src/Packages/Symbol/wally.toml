@@ -3,5 +3,8 @@ name = "miagobble/symbol"
 version = "1.0.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Blank userdata that can be converted into a string."
 
 [dependencies]

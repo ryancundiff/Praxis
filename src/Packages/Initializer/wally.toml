@@ -3,5 +3,8 @@ name = "miagobble/initializer"
 version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Safely initializes modules, either ordered or unordered."
 
 [dependencies]

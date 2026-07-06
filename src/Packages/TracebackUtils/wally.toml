@@ -3,5 +3,8 @@ name = "miagobble/traceback-utils"
 version = "1.0.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "A collection of utilities related to debug library on Roblox."
 
 [dependencies]

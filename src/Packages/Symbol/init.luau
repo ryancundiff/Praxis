@@ -2,6 +2,8 @@
 
 --[=[
 	@class Symbol
+
+	Blank userdata that can be converted into a string.
 ]=]
 
 local Symbol = {}
