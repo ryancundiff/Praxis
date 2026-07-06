@@ -15,5 +15,6 @@ Praxis.ProgressionUtils = require(Packages.ProgressionUtils)
 Praxis.Initializer = require(Packages.Initializer)
 Praxis.Signal = require(Packages.Signal)
 Praxis.DialogueTree = require(Packages.DialogueTree)
+Praxis.TagUtils = require(Packages.TagUtils)
 
 return Praxis
