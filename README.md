@@ -18,7 +18,6 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
 | BadgeUtils | A collection of utilities for reading and awarding badges | TBD | TBD |
 | Bezier | A bezier curve utility module | TBD | TBD |
-| Ragdoll | Ragdolls for R6 and R15 | TBD | TBD |
 | Binder | Binds OOP classes to Roblox instances | TBD | TBD |
 | Input | Utilities related to player input | TBD | TBD |
 
