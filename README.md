@@ -16,10 +16,22 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Initializer | Safely initializes modules, either ordered or unordered. | https://wally.run/package/miagobble/initializer |
 | Signal | A Luau class mockup of Roblox signals and connections | https://wally.run/package/miagobble/signal |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
-| BadgeUtils | A collection of utilities for reading and awarding badges | TBD | TBD |
+| Badges | A collection of utilities for reading and awarding badges | TBD | TBD |
 | Bezier | A bezier curve utility module | TBD | TBD |
 | Binder | Binds OOP classes to Roblox instances | TBD | TBD |
 | Input | Utilities related to player input | TBD | TBD |
+| RateLimiter | Utilities related to rate limiting | TBD | TBD |
+| Time | Utilities related to time, including for daily rewards | TBD | TBD |
+| TagUtils | Simple wrapper for `CollectionService` | TBD | TBD |
+| Session | Session-style system that binds players to sessions with cleanup and updates | TBD | TBD |
+| Child | Utility function for finding children, with wait behavior | TBD | TBD |
+| Oklab | Module for converting Color3 values to and from Oklab color values | TBD | TBD |
+| ValuePacker | Utility for packing and unpacking values into arrays of values | TBD | TBD |
+| Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | TBD | TBD |
+| Flipbook | Utility for managing flipbooks | TBD | TBD |
+| DialogueTree | Dialogue system backend | TBD | TBD |
+| Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD | TBD |
+| Analytics | Wrapper for Roblox analytics | TBD | TBD |
 
 The above list can change at any time, especially for parts that are not yet completed.
 
