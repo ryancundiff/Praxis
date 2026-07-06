@@ -1,0 +1,11 @@
+[package]
+name = "miagobble/value-packer"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Unpacks and packs values of various types into a table of numbers."
+
+[dependencies]
+Oklab = "miagobble/oklab@1.0.0"
