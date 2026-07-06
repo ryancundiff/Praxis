@@ -1,5 +1,5 @@
 --[=[
-    @class Bezier
+	@class Bezier
 
 	A utility module for working with Bezier curves.
 ]=]
@@ -19,7 +19,7 @@ end
 	@param AlphaValue number -- Interpolation alpha from 0 to 1
 	@return BezierPoint
 
-    Linearly interpolates between two points.
+	Linearly interpolates between two points.
 ]=]
 
 function Bezier.Lerp(StartPoint: BezierPoint, EndPoint: BezierPoint, AlphaValue: number): BezierPoint
@@ -31,7 +31,7 @@ end
 	@param AlphaValue number -- Position on curve from 0 to 1
 	@return BezierPoint
 
-    Evaluates a Bezier curve at t using De Casteljau's algorithm.
+	Evaluates a Bezier curve at t using De Casteljau's algorithm.
 ]=]
 
 function Bezier.Evaluate(ControlPoints: { BezierPoint }, AlphaValue: number): BezierPoint
@@ -58,7 +58,7 @@ end
 	@param AlphaValue number -- Position on curve from 0 to 1
 	@return BezierPoint
 
-    Evaluates a quadratic Bezier curve (3 points) at t.
+	Evaluates a quadratic Bezier curve (3 points) at t.
 ]=]
 
 function Bezier.Quadratic(StartPoint: BezierPoint, ControlPoint: BezierPoint, EndPoint: BezierPoint, AlphaValue: number): BezierPoint
@@ -66,7 +66,7 @@ function Bezier.Quadratic(StartPoint: BezierPoint, ControlPoint: BezierPoint, En
 end
 
 --[=[
-    @param StartPoint BezierPoint -- Start point
+	@param StartPoint BezierPoint -- Start point
 	@param FirstControlPoint BezierPoint -- First handle point
 	@param SecondControlPoint BezierPoint -- Second handle point
 	@param EndPoint BezierPoint -- End point
@@ -85,7 +85,7 @@ end
 	@param AlphaValue number -- Position on curve from 0 to 1
 	@return BezierPoint
 
-    Gets a tangent direction vector/value at t.
+	Gets a tangent direction vector/value at t.
 
 	For Vector2 and Vector3 points, this returns a unit direction when possible.
 	For number points, this returns the scalar derivative value.
@@ -128,7 +128,7 @@ end
 	@param AlphaValue number -- Position on curve from 0 to 1
 	@return {BezierPoint}, {BezierPoint} -- Left and right control point arrays
 
-    Splits a Bezier curve into left and right curves at t.
+	Splits a Bezier curve into left and right curves at t.
 ]=]
 
 function Bezier.Split(ControlPoints: { BezierPoint }, AlphaValue: number): ({ BezierPoint }, { BezierPoint })
@@ -158,7 +158,7 @@ end
 	@param SegmentCount number -- Number of line segments to generate, minimum 1
 	@return {BezierPoint}
 
-    Samples a Bezier curve into evenly spaced t-steps.
+	Samples a Bezier curve into evenly spaced t-steps.
 ]=]
 
 function Bezier.Sample(ControlPoints: { BezierPoint }, SegmentCount: number): { BezierPoint }
@@ -185,7 +185,7 @@ end
 	@param SegmentCount number -- Number of segments for approximation, minimum 1
 	@return number
 
-    Approximates curve length by sampling line segments.
+	Approximates curve length by sampling line segments.
 
 	Only Vector2 and Vector3 curves support length approximation.
 ]=]
