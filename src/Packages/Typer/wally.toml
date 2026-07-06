@@ -3,5 +3,8 @@ name = "miagobble/typer"
 version = "0.1.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Strict typechecking in runtime implementation for Roblox."
 
 [dependencies]

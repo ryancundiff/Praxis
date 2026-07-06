@@ -3,5 +3,8 @@ name = "miagobble/seam-story-utils"
 version = "0.1.3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Utilities for hooking up Seam to UI Labs for UI stories."
 
 [dependencies]

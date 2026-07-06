@@ -3,6 +3,9 @@ name = "miagobble/progression-utils"
 version = "1.0.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Utilities for managing quest data and progress."
 
 [dependencies]
 Signal = "miagobble/signal@1.0.1"

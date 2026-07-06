@@ -1,10 +1,10 @@
 [package]
-name = "miagobble/traceback-utils"
-version = "1.0.1"
+name = "miagobble/tag-utils"
+version = "1.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
 homepage = "https://praxis.igottic.com/"
-description = "A collection of utilities related to debug library on Roblox."
+description = "Wrapper for collection service to make it easier to work with tags."
 
 [dependencies]

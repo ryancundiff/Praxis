@@ -3,5 +3,8 @@ name = "miagobble/signal"
 version = "1.0.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Fork of sleitnick's signal module."
 
 [dependencies]

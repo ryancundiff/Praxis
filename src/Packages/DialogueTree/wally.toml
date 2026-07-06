@@ -1,0 +1,11 @@
+[package]
+name = "miagobble/dialogue-tree"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Backend code to process dialogue trees, with built-in functionality for sessions and memory. Uses signals to communicate with the front-end."
+
+[dependencies]
+Signal = "miagobble/signal@1.0.1"

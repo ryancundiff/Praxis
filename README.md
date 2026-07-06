@@ -15,23 +15,23 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | ProgressionUtils | Collection of utilities for currency, quests, and more | https://wally.run/package/miagobble/progression-utils |
 | Initializer | Safely initializes modules, either ordered or unordered. | https://wally.run/package/miagobble/initializer |
 | Signal | A Luau class mockup of Roblox signals and connections | https://wally.run/package/miagobble/signal |
-| EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD | TBD |
-| Badges | A collection of utilities for reading and awarding badges | TBD | TBD |
-| Bezier | A bezier curve utility module | TBD | TBD |
-| Binder | Binds OOP classes to Roblox instances | TBD | TBD |
-| Input | Utilities related to player input | TBD | TBD |
-| RateLimiter | Utilities related to rate limiting | TBD | TBD |
-| Time | Utilities related to time, including for daily rewards | TBD | TBD |
-| TagUtils | Simple wrapper for `CollectionService` | TBD | TBD |
-| Session | Session-style system that binds players to sessions with cleanup and updates | TBD | TBD |
-| Child | Utility function for finding children, with wait behavior | TBD | TBD |
-| Oklab | Module for converting Color3 values to and from Oklab color values | TBD | TBD |
-| ValuePacker | Utility for packing and unpacking values into arrays of values | TBD | TBD |
-| Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | TBD | TBD |
-| Flipbook | Utility for managing flipbooks | TBD | TBD |
-| DialogueTree | Dialogue system backend | TBD | TBD |
-| Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD | TBD |
-| Analytics | Wrapper for Roblox analytics | TBD | TBD |
+| DialogueTree | Dialogue system backend for conversational features with non-player characters | https://wally.run/package/miagobble/dialogue-tree |
+| TagUtils | Simple wrapper for `CollectionService` | https://wally.run/package/miagobble/tag-utils |
+| EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD |
+| Badges | A collection of utilities for reading and awarding badges | TBD |
+| Bezier | A bezier curve utility module | TBD |
+| Binder | Binds OOP classes to Roblox instances | TBD |
+| Input | Utilities related to player input | TBD |
+| RateLimiter | Utilities related to rate limiting | TBD |
+| Time | Utilities related to time, including for daily rewards | TBD |
+| Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
+| Child | Utility function for finding children, with wait behavior | TBD |
+| Oklab | Module for converting Color3 values to and from Oklab color values | TBD |
+| ValuePacker | Utility for packing and unpacking values into arrays of values | TBD |
+| Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | TBD |
+| Flipbook | Utility for managing flipbooks | TBD |
+| Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD |
+| Analytics | Wrapper for Roblox analytics | TBD |
 
 The above list can change at any time, especially for parts that are not yet completed.
 

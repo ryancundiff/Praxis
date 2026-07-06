@@ -3,6 +3,9 @@ name = "miagobble/bucket"
 version = "1.0.4"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Used for cleanup of various data types and instances."
 
 [dependencies]
 Typer = "miagobble/typer@0.1.1"
