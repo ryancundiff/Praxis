@@ -1,0 +1,11 @@
+[package]
+name = "miagobble/progression-utils"
+version = "1.0.2"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Signal = "miagobble/signal@1.0.1"
+Symbol = "miagobble/symbol@1.0.1"
+Typer = "miagobble/typer@0.1.1"
+Bucket = "miagobble/bucket@1.0.1"

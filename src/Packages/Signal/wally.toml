@@ -1,0 +1,7 @@
+[package]
+name = "miagobble/signal"
+version = "1.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
