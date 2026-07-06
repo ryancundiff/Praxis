@@ -15,7 +15,8 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | ProgressionUtils | Collection of utilities for currency, quests, and more | https://wally.run/package/miagobble/progression-utils |
 | Initializer | Safely initializes modules, either ordered or unordered. | https://wally.run/package/miagobble/initializer |
 | Signal | A Luau class mockup of Roblox signals and connections | https://wally.run/package/miagobble/signal |
-| DialogueTree | Dialogue system backend for conversational features with non-player characters | https://wally.run/package/miagobble/dialogue-tree?version=1.0.0 |
+| DialogueTree | Dialogue system backend for conversational features with non-player characters | https://wally.run/package/miagobble/dialogue-tree |
+| TagUtils | Simple wrapper for `CollectionService` | https://wally.run/package/miagobble/tag-utils |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD |
 | Badges | A collection of utilities for reading and awarding badges | TBD |
 | Bezier | A bezier curve utility module | TBD |
@@ -23,7 +24,6 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Input | Utilities related to player input | TBD |
 | RateLimiter | Utilities related to rate limiting | TBD |
 | Time | Utilities related to time, including for daily rewards | TBD |
-| TagUtils | Simple wrapper for `CollectionService` | TBD |
 | Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
 | Child | Utility function for finding children, with wait behavior | TBD |
 | Oklab | Module for converting Color3 values to and from Oklab color values | TBD |
