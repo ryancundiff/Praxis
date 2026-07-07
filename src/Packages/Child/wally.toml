@@ -1,0 +1,10 @@
+[package]
+name = "miagobble/child"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Finds children of an instance by path."
+
+[dependencies]

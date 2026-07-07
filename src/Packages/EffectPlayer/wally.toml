@@ -1,0 +1,11 @@
+[package]
+name = "miagobble/effect-player"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Play visual effects created by standard visual effect plugins."
+
+[dependencies]
+Bezier = "miagobble/bezier@1.1.0"

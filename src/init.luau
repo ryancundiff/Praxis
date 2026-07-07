@@ -3,7 +3,6 @@
 
 local Praxis = {}
 
--- Imports
 local Packages = script.Packages
 
 Praxis.Bucket = require(Packages.Bucket)
@@ -16,5 +15,11 @@ Praxis.Initializer = require(Packages.Initializer)
 Praxis.Signal = require(Packages.Signal)
 Praxis.DialogueTree = require(Packages.DialogueTree)
 Praxis.TagUtils = require(Packages.TagUtils)
+Praxis.Bezier = require(Packages.Bezier)
+Praxis.ValuePacker = require(Packages.ValuePacker)
+Praxis.Oklab = require(Packages.Oklab)
+Praxis.EffectPlayer = require(Packages.EffectPlayer)
+Praxis.Child = require(Packages.Child)
+Praxis.Optional = require(Packages.Optional)
 
 return Praxis
