@@ -1,0 +1,10 @@
+[package]
+name = "miagobble/optional"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Calls `require` on object or path, returning nil if it does not exist."
+
+[dependencies]

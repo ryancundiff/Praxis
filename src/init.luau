@@ -20,5 +20,6 @@ Praxis.ValuePacker = require(Packages.ValuePacker)
 Praxis.Oklab = require(Packages.Oklab)
 Praxis.EffectPlayer = require(Packages.EffectPlayer)
 Praxis.Child = require(Packages.Child)
+Praxis.Optional = require(Packages.Optional)
 
 return Praxis
