@@ -18,5 +18,6 @@ Praxis.TagUtils = require(Packages.TagUtils)
 Praxis.Bezier = require(Packages.Bezier)
 Praxis.ValuePacker = require(Packages.ValuePacker)
 Praxis.Oklab = require(Packages.Oklab)
+Praxis.EffectPlayer = require(Packages.EffectPlayer)
 
 return Praxis
