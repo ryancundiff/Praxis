@@ -23,7 +23,9 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | https://wally.run/package/miagobble/effect-player |
 | Child | Utility function for finding children, with wait behavior | https://wally.run/package/miagobble/child |
 | Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | https://wally.run/package/miagobble/optional |
-| Badges | A collection of utilities for reading and awarding badges | TBD |
+| Badges | A collection of utilities for reading and awarding badges | https://wally.run/package/miagobble/badges |
+| SerDes | Serialization and deserialization utilities using ValuePacker with buffer support. | https://wally.run/package/miagobble/ser-des |
+| DataStore | DataStore wrapper with serialized table saves and reconciliation support. | https://wally.run/package/miagobble/data-store |
 | Binder | Binds OOP classes to Roblox instances | TBD |
 | Input | Utilities related to player input | TBD |
 | RateLimiter | Utilities related to rate limiting | TBD |
