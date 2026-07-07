@@ -32,7 +32,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Binder | Binds OOP classes to Roblox instances | https://wally.run/package/miagobble/binder |
 | Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
 | Flipbook | Utility for managing flipbooks | TBD |
-| Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD |
+| Hint | Simple interface based on old Roblox `Hint` instance | TBD |
 | Analytics | Wrapper for Roblox analytics | TBD |
 
 The above list can change at any time, especially for parts that are not yet completed.
