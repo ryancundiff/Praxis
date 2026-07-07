@@ -6,16 +6,23 @@
 
 local Badges = {}
 
+-- Constants
+local SERIALS_DATASTORE_NAME = "Praxis.Badges.Serials"
+local SERIALS_KEY_PREFIX = "Badge_"
+
 -- Services
 local BadgeService = game:GetService("BadgeService")
+local RunService = game:GetService("RunService")
 
 -- Imports
 local Signal = require(script.Parent.Signal)
 local DataStore = require(script.Parent.DataStore)
 
--- Constants
-local SERIALS_DATASTORE_NAME = "Praxis.Badges.Serials"
-local SERIALS_KEY_PREFIX = "Badge_"
+if RunService:IsClient() then
+    return {}
+end
+
+-- Variables
 local SerialDataStore = DataStore.CreateStore({
     Name = SERIALS_DATASTORE_NAME,
     Template = {
