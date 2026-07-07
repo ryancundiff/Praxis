@@ -22,19 +22,19 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Oklab | Module for converting Color3 values to and from Oklab color values | https://wally.run/package/miagobble/oklab |
 | EffectPlayer | Plays visual effects through VFX plugin standardized format | https://wally.run/package/miagobble/effect-player |
 | Child | Utility function for finding children, with wait behavior | https://wally.run/package/miagobble/child |
+| Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | https://wally.run/package/miagobble/optional |
 | Badges | A collection of utilities for reading and awarding badges | TBD |
 | Binder | Binds OOP classes to Roblox instances | TBD |
 | Input | Utilities related to player input | TBD |
 | RateLimiter | Utilities related to rate limiting | TBD |
 | Time | Utilities related to time, including for daily rewards | TBD |
 | Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
-| Optional | Wrapper for `require`; if module doesn't exist, value is `nil` | TBD |
 | Flipbook | Utility for managing flipbooks | TBD |
 | Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD |
 | Analytics | Wrapper for Roblox analytics | TBD |
 
 The above list can change at any time, especially for parts that are not yet completed.
 
-Praxis is currently very early in development and is public to serve as a WIP.
+Praxis is currently early in development and is public to serve as a WIP.
 
 Need support, want to leave suggestions, or chat about Praxis? Join this Discord server: https://discord.gg/Ux9jdhhWxg
