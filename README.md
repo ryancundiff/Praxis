@@ -28,8 +28,8 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | DataStore | DataStore wrapper with serialized table saves and reconciliation support. | https://wally.run/package/miagobble/data-store |
 | Input | Utilities related to player input | https://wally.run/package/miagobble/input |
 | RateLimiter | Utilities related to rate limiting | https://wally.run/package/miagobble/rate-limiter |
+| Time | Utilities related to time, including for daily rewards | https://wally.run/package/miagobble/time |
 | Binder | Binds OOP classes to Roblox instances | TBD |
-| Time | Utilities related to time, including for daily rewards | TBD |
 | Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
 | Flipbook | Utility for managing flipbooks | TBD |
 | Hint | Debug-style text interface based on old Roblox `Hint` instance | TBD |
