@@ -20,7 +20,7 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | Bezier | A bezier curve utility module | https://wally.run/package/miagobble/bezier |
 | ValuePacker | Utility for packing and unpacking values into arrays of values | https://wally.run/package/miagobble/value-packer |
 | Oklab | Module for converting Color3 values to and from Oklab color values | https://wally.run/package/miagobble/oklab |
-| EffectPlayer | Plays visual effects through VFX plugin standardized format | TBD |
+| EffectPlayer | Plays visual effects through VFX plugin standardized format | https://wally.run/package/miagobble/effect-player?version=1.0.0 |
 | Badges | A collection of utilities for reading and awarding badges | TBD |
 | Binder | Binds OOP classes to Roblox instances | TBD |
 | Input | Utilities related to player input | TBD |
