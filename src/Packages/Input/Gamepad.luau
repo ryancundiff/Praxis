@@ -19,6 +19,20 @@ local Bucket = require(script.Parent.Parent.Bucket)
 
 -- Types
 export type GamepadState = {[Enum.KeyCode] : InputObject}
+type Gamepad = typeof(setmetatable({}, Gamepad)) & {
+    _Bucket : Bucket.Bucket,
+    _GamepadBucket : Bucket.Bucket,
+    _GamepadInput : Enum.UserInputType?,
+    _SetMotorIds : {[Enum.VibrationMotor] : number},
+    ButtonDown : Signal.Signal<Enum.KeyCode, boolean>,
+    ButtonUp : Signal.Signal<Enum.KeyCode, boolean>,
+    Connected : Signal.Signal<>,
+    Disconnected : Signal.Signal<>,
+    GamepadChanged : Signal.Signal<Enum.UserInputType?>,
+    DefaultDeadzone : number,
+    SupportsVibration : boolean,
+    State : GamepadState,
+}
 
 local function ApplyDeadzone(Value : number, Threshold : number) : number
     if math.abs(Value) < Threshold then
@@ -72,7 +86,7 @@ local function HeartbeatDelay(Duration : number, Callback : () -> ()) : RBXScrip
 end
 
 function Gamepad.new(GamepadInput : Enum.UserInputType?)
-    local self = setmetatable({}, Gamepad)
+    local self : Gamepad = setmetatable({}, Gamepad)
 
     self._Bucket = Bucket.new()
     self._GamepadBucket = Bucket.new()
@@ -101,7 +115,7 @@ function Gamepad.new(GamepadInput : Enum.UserInputType?)
     return self
 end
 
-function Gamepad:_SetupActiveGamepad(GamepadInput : Enum.UserInputType?)
+function Gamepad._SetupActiveGamepad(self : Gamepad, GamepadInput : Enum.UserInputType?)
     local LastGamepad = self._GamepadInput
 
     if GamepadInput == LastGamepad then
@@ -161,7 +175,7 @@ function Gamepad:_SetupActiveGamepad(GamepadInput : Enum.UserInputType?)
     self.GamepadChanged:Fire(GamepadInput)
 end
 
-function Gamepad:_SetupGamepad(ForcedGamepad : Enum.UserInputType?)
+function Gamepad._SetupGamepad(self : Gamepad, ForcedGamepad : Enum.UserInputType?)
     if ForcedGamepad then
         self._Bucket:Add(UserInputService.GamepadConnected:Connect(function(GamepadInput)
             if GamepadInput == ForcedGamepad then
@@ -196,7 +210,7 @@ function Gamepad:_SetupGamepad(ForcedGamepad : Enum.UserInputType?)
     end
 end
 
-function Gamepad:_SetupMotors()
+function Gamepad._SetupMotors(self : Gamepad)
     self._SetMotorIds = {}
 
     for _, Motor in Enum.VibrationMotor:GetEnumItems() do
@@ -204,7 +218,7 @@ function Gamepad:_SetupMotors()
     end
 end
 
-function Gamepad:GetThumbstick(Thumbstick : Enum.KeyCode, DeadzoneThreshold : number?) : Vector2
+function Gamepad.GetThumbstick(self : Gamepad, Thumbstick : Enum.KeyCode, DeadzoneThreshold : number?) : Vector2
     local InputObject = self.State[Thumbstick]
 
     if not InputObject then
@@ -220,7 +234,7 @@ function Gamepad:GetThumbstick(Thumbstick : Enum.KeyCode, DeadzoneThreshold : nu
     )
 end
 
-function Gamepad:GetTrigger(Trigger : Enum.KeyCode, DeadzoneThreshold : number?) : number
+function Gamepad.GetTrigger(self : Gamepad, Trigger : Enum.KeyCode, DeadzoneThreshold : number?) : number
     local InputObject = self.State[Trigger]
 
     if not InputObject then
@@ -230,7 +244,7 @@ function Gamepad:GetTrigger(Trigger : Enum.KeyCode, DeadzoneThreshold : number?)
     return ApplyDeadzone(InputObject.Position.Z, DeadzoneThreshold or self.DefaultDeadzone)
 end
 
-function Gamepad:IsButtonDown(GamepadButton : Enum.KeyCode) : boolean
+function Gamepad.IsButtonDown(self : Gamepad, GamepadButton : Enum.KeyCode) : boolean
     if not self._GamepadInput then
         return false
     end
@@ -238,7 +252,7 @@ function Gamepad:IsButtonDown(GamepadButton : Enum.KeyCode) : boolean
     return UserInputService:IsGamepadButtonDown(self._GamepadInput, GamepadButton)
 end
 
-function Gamepad:IsMotorSupported(Motor : Enum.VibrationMotor) : boolean
+function Gamepad.IsMotorSupported(self : Gamepad, Motor : Enum.VibrationMotor) : boolean
     if not self._GamepadInput then
         return false
     end
@@ -246,7 +260,7 @@ function Gamepad:IsMotorSupported(Motor : Enum.VibrationMotor) : boolean
     return HapticService:IsMotorSupported(self._GamepadInput, Motor)
 end
 
-function Gamepad:SetMotor(Motor : Enum.VibrationMotor, Intensity : number) : number
+function Gamepad.SetMotor(self : Gamepad, Motor : Enum.VibrationMotor, Intensity : number) : number
     self._SetMotorIds[Motor] += 1
 
     local Id = self._SetMotorIds[Motor]
@@ -258,7 +272,7 @@ function Gamepad:SetMotor(Motor : Enum.VibrationMotor, Intensity : number) : num
     return Id
 end
 
-function Gamepad:PulseMotor(Motor : Enum.VibrationMotor, Intensity : number, Duration : number)
+function Gamepad.PulseMotor(self : Gamepad, Motor : Enum.VibrationMotor, Intensity : number, Duration : number)
     local Id = self:SetMotor(Motor, Intensity)
 
     local HeartbeatConnection = HeartbeatDelay(Duration, function()
@@ -272,11 +286,11 @@ function Gamepad:PulseMotor(Motor : Enum.VibrationMotor, Intensity : number, Dur
     self._GamepadBucket:Add(HeartbeatConnection)
 end
 
-function Gamepad:StopMotor(Motor : Enum.VibrationMotor)
+function Gamepad.StopMotor(self : Gamepad, Motor : Enum.VibrationMotor)
     self:SetMotor(Motor, 0)
 end
 
-function Gamepad:StopMotors()
+function Gamepad.StopMotors(self : Gamepad)
     for _, Motor in Enum.VibrationMotor:GetEnumItems() do
         if self:IsMotorSupported(Motor) then
             self:StopMotor(Motor)
@@ -284,7 +298,7 @@ function Gamepad:StopMotors()
     end
 end
 
-function Gamepad:IsConnected() : boolean
+function Gamepad.IsConnected(self : Gamepad) : boolean
     if not self._GamepadInput then
         return false
     end
@@ -292,19 +306,27 @@ function Gamepad:IsConnected() : boolean
     return UserInputService:GetGamepadConnected(self._GamepadInput)
 end
 
-function Gamepad:GetUserInputType() : Enum.UserInputType?
+function Gamepad.GetUserInputType(self : Gamepad) : Enum.UserInputType?
     return self._GamepadInput
 end
 
-function Gamepad:SetAutoSelectGui(Enabled : boolean)
+function Gamepad.SetAutoSelectGui(self : Gamepad, Enabled : boolean)
+    if not self then
+        error("Expected Gamepad self")
+    end
+
     GuiService.AutoSelectGuiEnabled = Enabled
 end
 
-function Gamepad:IsAutoSelectGuiEnabled() : boolean
+function Gamepad.IsAutoSelectGuiEnabled(self : Gamepad) : boolean
+    if not self then
+        error("Expected Gamepad self")
+    end
+
     return GuiService.AutoSelectGuiEnabled
 end
 
-function Gamepad:Destroy()
+function Gamepad.Destroy(self : Gamepad)
     self._Bucket:Destroy()
 end
 

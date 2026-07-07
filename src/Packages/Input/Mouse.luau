@@ -17,8 +17,21 @@ local UserInputService = game:GetService("UserInputService")
 local Signal = require(script.Parent.Parent.Signal)
 local Bucket = require(script.Parent.Parent.Bucket)
 
+-- Types
+type Mouse = typeof(setmetatable({}, Mouse)) & {
+    _Bucket : Bucket.Bucket,
+    LeftDown : Signal.Signal<boolean>,
+    LeftUp : Signal.Signal<boolean>,
+    RightDown : Signal.Signal<boolean>,
+    RightUp : Signal.Signal<boolean>,
+    MiddleDown : Signal.Signal<boolean>,
+    MiddleUp : Signal.Signal<boolean>,
+    Moved : Signal.Signal<Vector2, boolean>,
+    Scrolled : Signal.Signal<number, boolean>,
+}
+
 function Mouse.new()
-    local self = setmetatable({}, Mouse)
+    local self : Mouse = setmetatable({}, Mouse)
 
     self._Bucket = Bucket.new()
 
@@ -72,27 +85,51 @@ function Mouse.new()
     return self
 end
 
-function Mouse:IsLeftDown() : boolean
+function Mouse.IsLeftDown(self : Mouse) : boolean
+    if not self then
+        error("Expected Mouse self")
+    end
+
     return UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
 end
 
-function Mouse:IsRightDown() : boolean
+function Mouse.IsRightDown(self : Mouse) : boolean
+    if not self then
+        error("Expected Mouse self")
+    end
+
     return UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
 end
 
-function Mouse:IsMiddleDown() : boolean
+function Mouse.IsMiddleDown(self : Mouse) : boolean
+    if not self then
+        error("Expected Mouse self")
+    end
+
     return UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton3)
 end
 
-function Mouse:GetPosition() : Vector2
+function Mouse.GetPosition(self : Mouse) : Vector2
+    if not self then
+        error("Expected Mouse self")
+    end
+
     return UserInputService:GetMouseLocation()
 end
 
-function Mouse:GetDelta() : Vector2
+function Mouse.GetDelta(self : Mouse) : Vector2
+    if not self then
+        error("Expected Mouse self")
+    end
+
     return UserInputService:GetMouseDelta()
 end
 
-function Mouse:GetRay(OverridePos : Vector2?) : Ray
+function Mouse.GetRay(self : Mouse, OverridePos : Vector2?) : Ray
+    if not self then
+        error("Expected Mouse self")
+    end
+
     local CurrentCamera = workspace.CurrentCamera
 
     if not CurrentCamera then
@@ -103,7 +140,7 @@ function Mouse:GetRay(OverridePos : Vector2?) : Ray
     return CurrentCamera:ViewportPointToRay(MousePos.X, MousePos.Y)
 end
 
-function Mouse:Raycast(RaycastParams : RaycastParams, Distance : number?, OverridePos : Vector2?) : RaycastResult?
+function Mouse.Raycast(self : Mouse, RaycastParams : RaycastParams, Distance : number?, OverridePos : Vector2?) : RaycastResult?
     local ViewportMouseRay = self:GetRay(OverridePos)
 
     return workspace:Raycast(
@@ -113,24 +150,36 @@ function Mouse:Raycast(RaycastParams : RaycastParams, Distance : number?, Overri
     )
 end
 
-function Mouse:Project(Distance : number?, OverridePos : Vector2?) : Vector3
+function Mouse.Project(self : Mouse, Distance : number?, OverridePos : Vector2?) : Vector3
     local ViewportMouseRay = self:GetRay(OverridePos)
     return ViewportMouseRay.Origin + (ViewportMouseRay.Direction.Unit * (Distance or RAY_DISTANCE))
 end
 
-function Mouse:Lock()
+function Mouse.Lock(self : Mouse)
+    if not self then
+        error("Expected Mouse self")
+    end
+
     UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
 end
 
-function Mouse:LockCenter()
+function Mouse.LockCenter(self : Mouse)
+    if not self then
+        error("Expected Mouse self")
+    end
+
     UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 end
 
-function Mouse:Unlock()
+function Mouse.Unlock(self : Mouse)
+    if not self then
+        error("Expected Mouse self")
+    end
+
     UserInputService.MouseBehavior = Enum.MouseBehavior.Default
 end
 
-function Mouse:Destroy()
+function Mouse.Destroy(self : Mouse)
     self._Bucket:Destroy()
 end
 

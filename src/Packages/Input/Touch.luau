@@ -14,8 +14,23 @@ local UserInputService = game:GetService("UserInputService")
 local Signal = require(script.Parent.Parent.Signal)
 local Bucket = require(script.Parent.Parent.Bucket)
 
+-- Types
+type Touch = typeof(setmetatable({}, Touch)) & {
+    _Bucket : Bucket.Bucket,
+    TouchTap : Signal.Signal<{Vector2}, boolean>,
+    TouchTapInWorld : Signal.Signal<Vector2, boolean>,
+    TouchMoved : Signal.Signal<InputObject, boolean>,
+    TouchLongPress : Signal.Signal<{Vector2}, Enum.UserInputState, boolean>,
+    TouchPan : Signal.Signal<{Vector2}, Vector2, Vector2, Enum.UserInputState, boolean>,
+    TouchPinch : Signal.Signal<{Vector2}, number, Vector2, Enum.UserInputState, boolean>,
+    TouchRotate : Signal.Signal<{Vector2}, number, number, Enum.UserInputState, boolean>,
+    TouchSwipe : Signal.Signal<Enum.SwipeDirection, number, boolean>,
+    TouchStarted : Signal.Signal<InputObject, boolean>,
+    TouchEnded : Signal.Signal<InputObject, boolean>,
+}
+
 function Touch.new()
-    local self = setmetatable({}, Touch)
+    local self : Touch = setmetatable({}, Touch)
 
     self._Bucket = Bucket.new()
 
@@ -44,11 +59,15 @@ function Touch.new()
     return self
 end
 
-function Touch:IsTouchEnabled() : boolean
+function Touch.IsTouchEnabled(self : Touch) : boolean
+    if not self then
+        error("Expected Touch self")
+    end
+
     return UserInputService.TouchEnabled
 end
 
-function Touch:Destroy()
+function Touch.Destroy(self : Touch)
     self._Bucket:Destroy()
 end
 

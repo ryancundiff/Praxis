@@ -14,8 +14,15 @@ local UserInputService = game:GetService("UserInputService")
 local Signal = require(script.Parent.Parent.Signal)
 local Bucket = require(script.Parent.Parent.Bucket)
 
+-- Types
+type Keyboard = typeof(setmetatable({}, Keyboard)) & {
+    _Bucket : Bucket.Bucket,
+    KeyDown : Signal.Signal<Enum.KeyCode, boolean>,
+    KeyUp : Signal.Signal<Enum.KeyCode, boolean>,
+}
+
 function Keyboard.new()
-    local self = setmetatable({}, Keyboard)
+    local self : Keyboard = setmetatable({}, Keyboard)
 
     self._Bucket = Bucket.new()
 
@@ -40,19 +47,23 @@ function Keyboard.new()
     return self
 end
 
-function Keyboard:IsKeyDown(KeyCode : Enum.KeyCode) : boolean
+function Keyboard.IsKeyDown(self : Keyboard, KeyCode : Enum.KeyCode) : boolean
+    if not self then
+        error("Expected Keyboard self")
+    end
+
     return UserInputService:IsKeyDown(KeyCode)
 end
 
-function Keyboard:AreKeysDown(KeyCodeOne : Enum.KeyCode, KeyCodeTwo : Enum.KeyCode) : boolean
+function Keyboard.AreKeysDown(self : Keyboard, KeyCodeOne : Enum.KeyCode, KeyCodeTwo : Enum.KeyCode) : boolean
     return self:IsKeyDown(KeyCodeOne) and self:IsKeyDown(KeyCodeTwo)
 end
 
-function Keyboard:AreEitherKeysDown(KeyCodeOne : Enum.KeyCode, KeyCodeTwo : Enum.KeyCode) : boolean
+function Keyboard.AreEitherKeysDown(self : Keyboard, KeyCodeOne : Enum.KeyCode, KeyCodeTwo : Enum.KeyCode) : boolean
     return self:IsKeyDown(KeyCodeOne) or self:IsKeyDown(KeyCodeTwo)
 end
 
-function Keyboard:Destroy()
+function Keyboard.Destroy(self : Keyboard)
     self._Bucket:Destroy()
 end
 
