@@ -27,8 +27,8 @@ Praxis contains the following libraries (with "TBD" ones being planned but not i
 | SerDes | Serialization and deserialization utilities using ValuePacker with buffer support. | https://wally.run/package/miagobble/ser-des |
 | DataStore | DataStore wrapper with serialized table saves and reconciliation support. | https://wally.run/package/miagobble/data-store |
 | Input | Utilities related to player input | https://wally.run/package/miagobble/input |
+| RateLimiter | Utilities related to rate limiting | https://wally.run/package/miagobble/rate-limiter |
 | Binder | Binds OOP classes to Roblox instances | TBD |
-| RateLimiter | Utilities related to rate limiting | TBD |
 | Time | Utilities related to time, including for daily rewards | TBD |
 | Session | Session-style system that binds players to sessions with cleanup and updates | TBD |
 | Flipbook | Utility for managing flipbooks | TBD |
