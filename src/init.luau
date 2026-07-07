@@ -21,5 +21,8 @@ Praxis.Oklab = require(Packages.Oklab)
 Praxis.EffectPlayer = require(Packages.EffectPlayer)
 Praxis.Child = require(Packages.Child)
 Praxis.Optional = require(Packages.Optional)
+Praxis.Badges = require(Packages.Badges)
+Praxis.SerDes = require(Packages.SerDes)
+Praxis.DataStore = require(Packages.DataStore)
 
 return Praxis
