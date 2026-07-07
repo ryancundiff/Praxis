@@ -6,7 +6,12 @@
 
 local DataStore = {}
 
+-- Constants
+local DEFAULT_MAX_RETRIES = 5
+local DEFAULT_RETRY_DELAY_SECONDS = 1
+
 -- Services
+local RunService = game:GetService("RunService")
 local DataStoreService = game:GetService("DataStoreService")
 
 -- Imports
@@ -27,9 +32,9 @@ export type StoreHandle = Config & {
     Store : GlobalDataStore,
 }
 
--- Constants
-local DEFAULT_MAX_RETRIES = 5
-local DEFAULT_RETRY_DELAY_SECONDS = 1
+if RunService:IsClient() then
+    return {}
+end
 
 local function Retry(OperationName : string, Callback : () -> any, MaxRetries : number?, RetryDelaySeconds : number?)
     local Attempts = MaxRetries or DEFAULT_MAX_RETRIES
