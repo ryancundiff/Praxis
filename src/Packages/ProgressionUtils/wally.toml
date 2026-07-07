@@ -1,6 +1,6 @@
 [package]
 name = "miagobble/progression-utils"
-version = "1.0.2"
+version = "1.0.4"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
@@ -11,4 +11,4 @@ description = "Utilities for managing quest data and progress."
 Signal = "miagobble/signal@1.0.1"
 Symbol = "miagobble/symbol@1.0.1"
 Typer = "miagobble/typer@0.1.1"
-Bucket = "miagobble/bucket@1.0.1"
+Bucket = "miagobble/bucket@1.0.5"

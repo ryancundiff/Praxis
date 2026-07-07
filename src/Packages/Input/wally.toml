@@ -1,6 +1,6 @@
 [package]
 name = "miagobble/input"
-version = "1.0.1"
+version = "1.0.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 license = "MIT"
@@ -9,4 +9,4 @@ description = "Utilities for preferred input, mouse, keyboard, touch, and gamepa
 
 [dependencies]
 Signal = "miagobble/signal@1.0.1"
-Bucket = "miagobble/bucket@1.0.4"
+Bucket = "miagobble/bucket@1.0.5"
