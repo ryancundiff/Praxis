@@ -24,5 +24,6 @@ Praxis.Optional = require(Packages.Optional)
 Praxis.Badges = require(Packages.Badges)
 Praxis.SerDes = require(Packages.SerDes)
 Praxis.DataStore = require(Packages.DataStore)
+Praxis.Input = require(Packages.Input)
 
 return Praxis
