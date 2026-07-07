@@ -26,5 +26,6 @@ Praxis.SerDes = require(Packages.SerDes)
 Praxis.DataStore = require(Packages.DataStore)
 Praxis.Input = require(Packages.Input)
 Praxis.RateLimiter = require(Packages.RateLimiter)
+Praxis.Time = require(Packages.Time)
 
 return Praxis
