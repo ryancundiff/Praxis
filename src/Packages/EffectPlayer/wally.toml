@@ -8,3 +8,4 @@ homepage = "https://praxis.igottic.com/"
 description = "Play visual effects created by standard visual effect plugins."
 
 [dependencies]
+Bezier = "miagobble/bezier@1.1.0"
