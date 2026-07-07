@@ -1,0 +1,13 @@
+[package]
+name = "miagobble/binder"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Binds OOP classes to Roblox instances through CollectionService tags."
+
+[dependencies]
+Signal = "miagobble/signal@1.0.1"
+Bucket = "miagobble/bucket@1.0.5"
+TagUtils = "miagobble/tag-utils@1.0.1"
