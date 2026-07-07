@@ -1,0 +1,11 @@
+[package]
+name = "miagobble/ser-des"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Serialization and deserialization utilities using ValuePacker with buffer support."
+
+[dependencies]
+ValuePacker = "miagobble/value-packer@1.0.0"

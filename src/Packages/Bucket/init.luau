@@ -8,7 +8,10 @@ local Bucket = {}
 Bucket.__index = Bucket
 
 -- Types
-export type Bucket = typeof(setmetatable({}, Bucket))
+export type Bucket = typeof(setmetatable({}, Bucket)) & {
+	CleanupQueue: {[any]: (any) -> nil},
+	IsCleaning: boolean,
+}
 
 -- Constants
 local TABLE_CLEANUP_METHODS = {
@@ -87,7 +90,7 @@ end
 ]=]
 
 function Bucket.new() : Bucket
-	local self = setmetatable({}, Bucket)
+	local self : Bucket = setmetatable({}, Bucket)
 
 	self.CleanupQueue = {}
 	self.IsCleaning = false
@@ -117,7 +120,7 @@ end
 	@return any -- The object you inputted
 ]=]
 
-function Bucket:Add(Object : any, CleanupMethodName : string?)
+function Bucket.Add(self : Bucket, Object : any, CleanupMethodName : string?)
 	if self.IsCleaning then
 		error("Cannot add an object to bucket during cleanup")
 	end
@@ -140,7 +143,7 @@ end
 	@return Promise -- The same promise that was inputted
 ]=]
 
-function Bucket:AddPromise(Object : any)
+function Bucket.AddPromise(self : Bucket, Object : any)
 	if self.IsCleaning then
 		error("Cannot add a promise to bucket during cleanup")
 	end
@@ -174,7 +177,7 @@ end
 	@param Object Instance -- The instance to track
 ]=]
 
-function Bucket:AttachToInstance(Object : Instance)
+function Bucket.AttachToInstance(self : Bucket, Object : Instance)
 	if self.IsCleaning then
 		error("Can't attach to instance when cleaning")
 	elseif not Object:IsDescendantOf(game) then
@@ -202,7 +205,7 @@ end
 	@return Bucket -- The sub-Bucket
 ]=]
 
-function Bucket:Extend()
+function Bucket.Extend(self : Bucket)
 	if self.IsCleaning then
 		error("Can't extend bucket when cleaning")
 	end
@@ -227,7 +230,7 @@ end
 	@param Object any -- The object to be removed from cleanup
 ]=]
 
-function Bucket:Remove(Object : any)
+function Bucket.Remove(self : Bucket, Object : any)
 	if self.IsCleaning then
 		error("Can't remove object when cleaning")
 	end
@@ -249,7 +252,7 @@ end
 	@return () -> nil
 ]=]
 
-function Bucket:GetWrappedDestroy()
+function Bucket.GetWrappedDestroy(self : Bucket)
 	return function()
 		self:Destroy()
 	end
@@ -267,7 +270,7 @@ end
 	```
 ]=]
 
-function Bucket:Destroy()
+function Bucket.Destroy(self : Bucket)
 	if not self.CleanupQueue or self.IsCleaning then
 		return
 	end
