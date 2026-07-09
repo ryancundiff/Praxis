@@ -11,9 +11,13 @@ Binder.__index = Binder
 local CollectionService = game:GetService("CollectionService")
 
 -- Imports
-local Bucket = require(script.Parent.Bucket)
-local Signal = require(script.Parent.Signal)
-local TagUtils = require(script.Parent.TagUtils)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local Bucket = require(Packages.Bucket)
+local Signal = require(Packages.Signal)
+local TagUtils = require(Packages.TagUtils)
 
 -- Types
 type Class<T> = {

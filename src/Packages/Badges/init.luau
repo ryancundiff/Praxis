@@ -15,8 +15,12 @@ local BadgeService = game:GetService("BadgeService")
 local RunService = game:GetService("RunService")
 
 -- Imports
-local Signal = require(script.Parent.Signal)
-local DataStore = require(script.Parent.DataStore)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local Signal = require(Packages.Signal)
+local DataStore = require(Packages.DataStore)
 
 if RunService:IsClient() then
     return {}
