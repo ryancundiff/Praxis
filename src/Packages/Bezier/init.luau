@@ -7,7 +7,11 @@
 local Bezier = {}
 
 -- Imports
-local ValuePacker = require(script.Parent.ValuePacker)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local ValuePacker = require(Packages.ValuePacker)
 
 local function LerpComponentValues(StartComponents: { number }, EndComponents: { number }, AlphaValue: number): { number }
 	local LerpedComponents = table.create(#StartComponents)

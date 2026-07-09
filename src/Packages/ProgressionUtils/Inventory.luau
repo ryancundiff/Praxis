@@ -18,7 +18,9 @@ export type InventoryData = {
 local HttpService = game:GetService("HttpService")
 
 -- Imports
-local Packages = script.Parent:FindFirstChild("Packages") or script.Parent.Parent
+local Packages = script.Parent:FindFirstChild("roblox_packages")
+	or script.Parent:FindFirstChild("Packages")
+	or script.Parent.Parent
 local Typer = require(Packages.Typer)
 
 function Inventory.AddItemToInventory(InventoryData : InventoryData, ItemData : ItemDataInput, MaxStack : number) : InventoryData

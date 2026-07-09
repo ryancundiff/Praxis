@@ -17,7 +17,11 @@ local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 
 -- Imports
-local Bezier = require(script.Parent.Bezier)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local Bezier = require(Packages.Bezier)
 
 -- Variables
 local ActiveTasks = {}

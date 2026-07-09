@@ -13,7 +13,11 @@ local ValuePacker = {}
 type UnpackedValue = {[number]: number}
 
 -- Imports
-local Oklab = require(script.Parent.Oklab) -- We use Oklab color space to make animating colors look more natural
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local Oklab = require(Packages.Oklab) -- We use Oklab color space to make animating colors look more natural
 
 -- Variables
 local Converter : {[string] : {Pack : (UnpackedValue : UnpackedValue) -> any, Unpack : (Value : any) -> UnpackedValue}} = {}

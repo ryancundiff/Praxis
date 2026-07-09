@@ -14,8 +14,12 @@ local RAY_DISTANCE = 1000
 local UserInputService = game:GetService("UserInputService")
 
 -- Imports
-local Signal = require(script.Parent.Parent.Signal)
-local Bucket = require(script.Parent.Parent.Bucket)
+local Packages = script.Parent:FindFirstChild("roblox_packages")
+	or script.Parent:FindFirstChild("Packages")
+	or script.Parent.Parent
+
+local Signal = require(Packages.Signal)
+local Bucket = require(Packages.Bucket)
 
 -- Types
 type Mouse = typeof(setmetatable({}, Mouse)) & {
