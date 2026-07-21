@@ -1,0 +1,10 @@
+[package]
+name = "miagobble/select"
+version = "1.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+license = "MIT"
+homepage = "https://praxis.igottic.com/"
+description = "Used to select singular values from a list of arguments."
+
+[dependencies]
