@@ -9,3 +9,4 @@ description = "Utilities for checking and awarding Roblox badges with save-table
 
 [dependencies]
 Signal = "miagobble/signal@1.0.1"
+DataStore = "miagobble/data-store@1.0.1"

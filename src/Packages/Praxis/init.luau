@@ -3,7 +3,10 @@
 
 local Praxis = {}
 
-local Packages = script.Packages
+-- Imports
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
 
 Praxis.Bucket = require(Packages.Bucket)
 Praxis.Symbol = require(Packages.Symbol)

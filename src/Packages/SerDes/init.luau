@@ -10,7 +10,11 @@ local SerDes = {}
 local HttpService = game:GetService("HttpService")
 
 -- Imports
-local ValuePacker = require(script.Parent.ValuePacker)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local ValuePacker = require(Packages.ValuePacker)
 
 -- Types
 type EncodedNode = {

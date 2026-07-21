@@ -1,0 +1,20 @@
+name = "miagobble/input"
+version = "1.0.2"
+description = "Utilities for preferred input, mouse, keyboard, touch, and gamepad capture."
+license = "MIT"
+authors = ["Mia Gobble (https://praxis.igottic.com/)"]
+repository = "https://github.com/MiaGobble/Praxis"
+
+includes = ["pesde.toml", "Gamepad.luau", "Keyboard.luau", "Mouse.luau", "PreferredInput.luau", "Touch.luau", "init.luau"]
+
+[target]
+environment = "roblox"
+lib = "init.luau"
+build_files = ["Gamepad.luau", "Keyboard.luau", "Mouse.luau", "PreferredInput.luau", "Touch.luau", "init.luau"]
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[dependencies]
+Signal = { workspace = "miagobble/signal", version = "^" }
+Bucket = { workspace = "miagobble/bucket", version = "^" }

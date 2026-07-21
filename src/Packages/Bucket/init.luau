@@ -28,8 +28,11 @@ local CLEANUP_METHOD_NAMES = {
 }
 
 -- Imports
-local Packages = script:FindFirstChild("Packages")
-local Typer = if Packages then require(Packages.Typer) else require(script.Parent.Typer)
+local Packages = script:FindFirstChild("roblox_packages")
+	or script:FindFirstChild("Packages")
+	or script.Parent
+
+local Typer = require(Packages.Typer)
 
 local function GetMatchingCleanupCallback(Object : any, CleanupMethodName : string?) : () -> nil
 	local ThisType = typeof(Object)

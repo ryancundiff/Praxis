@@ -1,0 +1,11 @@
+name = "miagobble/praxis_workspace"
+version = "0.0.0"
+private = true
+
+workspace_members = ["src/Packages/*"]
+
+[target]
+environment = "roblox"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"

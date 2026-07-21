@@ -30,7 +30,11 @@ export type Dialogue = {
 }
 
 -- Imports
-local Signal = require(script.Parent.Signal)
+local Packages = script:FindFirstChild("roblox_packages")
+    or script:FindFirstChild("Packages")
+    or script.Parent
+
+local Signal = require(Packages.Signal)
 
 -- Types Extended
 export type Session = {
